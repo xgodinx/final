@@ -1,0 +1,63 @@
+$main-font:"Montserrat", sans-serif;
+$main-color:#323264;
+$accent-color:#F0145A;
+$grey-color:#B3B3BA;
+$regular-color:#24A3FF;
+$hover-regular:#0085FF;
+$active-regular:#006CCF;
+$separator-color:#E6E6F0;
+$black-color: #000000;
+$white-color:#FFFFFF;
+
+
+%gradient-text{
+  background: linear-gradient(#F0145A,#EF8080);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+%gradient-bc{
+  background: RGBA(50, 50, 100, 1);
+   background: linear-gradient(181deg, rgba(50, 50, 100, 1) 0%, rgba(50, 50, 100, 1)50%,rgba(100, 62, 114, 1) 100%);
+}
+%h1{
+  font-weight: 700;
+  font-size: 38px;
+  @extend %gradient-text;
+}
+%h2{
+  font-weight: 700;
+  font-size: 30px;
+  color: $main-color;
+}
+
+%h3{
+  font-weight: 700;
+  font-size: 22px;
+  color: $main-color;
+}
+
+%h3-caps{
+  color: $main-color;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h4{
+  font-weight: 700;
+  font-size: 16px;
+  color: $main-color;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 375px) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: 767px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: 1024px) { @content; }
+  } @else if $breakpoint == lgx {
+    @media (min-width: 1440px) { @content; }
+  }
+}

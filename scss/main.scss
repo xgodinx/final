@@ -1,0 +1,116 @@
+@import "fonts.scss";
+@import "variables.scss";
+@import "layout.scss";
+@import "components.scss";
+
+
+//              HOME-page
+
+//              CONSISTENT
+
+.consistent {
+  padding: 30px;
+  @include respond(md){
+    padding: 60px;
+  }
+		&__row {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      @include respond (md){
+        grid-gap: 60px;
+      }
+      @include respond(lg){
+        display: grid;
+        grid-template-columns: minmax(auto, 1fr) auto minmax(auto, 1fr);
+        grid-template-rows: 1fr;
+      }
+      @include respond (lgx) {
+        min-width: 1080px;
+        max-width: 1360px;
+        margin: 0 auto;
+        grid-template-columns: 1fr auto 2fr;
+      }
+		}
+
+		&__menu {
+      @include respond(lg){
+        height: 100%;
+      }
+		}
+
+		&__list {
+      display: flex;
+      white-space: nowrap;  
+      gap: 30px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      @include respond (lg){
+        white-space: wrap;
+        display: grid;
+        grid-auto-flow: row;
+        justify-items: end;
+        height: 100%;
+      }
+		}
+
+		&__link {
+      @include respond (md){
+        font-size: 38px;
+      }
+      @include respond (lg){
+        display: flex;
+        flex-direction: column;
+      }
+      font-weight: bold;
+      font-size: 30px;
+      color: $grey-color;
+      &:hover{
+        color: $accent-color;
+        transition: color 0.3s ease;
+      }
+      
+		}
+
+		&__link-gradient {
+      @extend %gradient-text;
+		}
+
+		&__line {
+      width: 100%;
+      background-color: $grey-color;
+      opacity: 0.2;
+      height: 4px;
+      @include respond(lg){
+        height: 303px;
+        width: 4px;
+      }
+      
+		}
+
+		&__about {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      @include respond(lgx){
+        align-self: center;
+        justify-self: center;
+      }
+		}
+
+		&__title {
+      color: $white-color;
+      font-weight: bold;
+      font-size: 20px;
+      @include respond (md){
+        font-size: 30px;
+      }
+		}
+
+		&__text {
+      color: $white-color;
+      font-size: 19px;
+      line-height: 30px;
+		}
+}
+

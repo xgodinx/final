@@ -11,7 +11,7 @@ $white-color:#FFFFFF;
 
 
 %gradient-text{
-  background: linear-gradient(#F0145A,#EF8080);
+  background: linear-gradient(to right,#F0145A,#EF8080);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

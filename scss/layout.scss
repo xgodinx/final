@@ -21,7 +21,10 @@ body{
     
    }
    @include respond(lgx){
-    min-width: 1320px;
+    width: 1320px;
     max-width: 1600px;
+   }
+   @include respond(lgxl){
+    min-width: 1600px;
    }
 }

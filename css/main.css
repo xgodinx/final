@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:regular,700);
-.details__number, .consistent__link-gradient, .quality__title, .info__title, .profile__title, .services__title, .part__title {
+.details__number, .consistent__link-gradient, .oksana__title, .team__title, .quality__title, .info__title, .profile__title, .services__title, .part__title {
   background: linear-gradient(to right, #F0145A, #EF8080);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -10,9 +10,10 @@
   background: linear-gradient(181deg, rgb(50, 50, 100) 0%, rgb(50, 50, 100) 50%, rgb(100, 62, 114) 100%);
 }
 
-.quality__title, .info__title, .profile__title, .services__title, .part__title {
+.oksana__title, .team__title, .quality__title, .info__title, .profile__title, .services__title, .part__title {
   font-weight: 700;
   font-size: 38px;
+  line-height: 100%;
 }
 
 .card__title h2 {
@@ -21,7 +22,7 @@
   color: #323264;
 }
 
-.achievements__title, .trust__title {
+.oksana__subtitle, .achievements__title, .trust__title {
   color: #323264;
   font-weight: 700;
   font-size: 14px;
@@ -29,7 +30,7 @@
   text-transform: uppercase;
 }
 
-h4 {
+.team__name {
   font-weight: 700;
   font-size: 16px;
   color: #323264;
@@ -64,8 +65,13 @@ body {
 }
 @media (min-width: 1440px) {
   .container {
-    min-width: 1320px;
+    width: 1320px;
     max-width: 1600px;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    min-width: 1600px;
   }
 }
 
@@ -1409,6 +1415,234 @@ body {
   .circle {
     display: none;
   }
+}
+
+.team {
+  padding: 0 30px;
+  margin: 30px 0 60px;
+}
+@media (min-width: 767px) {
+  .team {
+    padding: 0;
+    margin: 60px 0;
+  }
+}
+.team__title {
+  font-size: 30px;
+  max-width: 1360px;
+  margin: 0 auto 30px;
+}
+@media (min-width: 767px) {
+  .team__title {
+    font-size: 38px;
+    margin-bottom: 60px;
+  }
+}
+.team__row {
+  display: grid;
+  grid-gap: 30px;
+}
+@media (min-width: 767px) {
+  .team__row {
+    grid-gap: 60px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .team__row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.team__image {
+  display: block;
+  height: 300px;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+@media (min-width: 767px) {
+  .team__image {
+    height: 400px;
+  }
+}
+.team__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.team__who {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.team__about {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.team__name {
+  display: block;
+}
+.team__name:hover {
+  color: #F0145A;
+}
+.team__position {
+  color: #B3B3BA;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.svg-arrow {
+  color: #24A3FF;
+}
+.svg-arrow:hover {
+  color: #F0145A;
+}
+
+.svg-arrow-rotate {
+  transform: rotate(270deg);
+}
+
+.oksana {
+  padding: 0 30px;
+  margin: 30px 0;
+}
+@media (min-width: 767px) {
+  .oksana {
+    padding: 0;
+    margin: 60px 0;
+  }
+}
+.oksana__row {
+  display: grid;
+  grid-gap: 30px;
+}
+@media (min-width: 767px) {
+  .oksana__row {
+    grid-template-columns: minmax(300px, 1fr) minmax(318px, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .oksana__row {
+    grid-template-columns: minmax(300px, 1fr) minmax(318px, 1fr);
+    grid-template-rows: 143px;
+  }
+}
+@media (min-width: 1440px) {
+  .oksana__row {
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 83px;
+  }
+}
+.oksana__image {
+  height: 375px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+@media (min-width: 1440px) {
+  .oksana__image {
+    height: 500px;
+  }
+}
+.oksana__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.oksana__contacts {
+  display: grid;
+  grid-gap: 15px;
+}
+@media (min-width: 767px) {
+  .oksana__contacts {
+    align-self: center;
+  }
+}
+@media (min-width: 1024px) {
+  .oksana__contacts {
+    align-self: start;
+  }
+}
+@media (min-width: 1440px) {
+  .oksana__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.oksana__contacts-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (min-width: 1440px) {
+  .oksana__contacts-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 26px;
+  }
+}
+.oksana__position {
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3B3BA;
+  grid-row: 2;
+  grid-column: 1;
+}
+.oksana__email {
+  display: block;
+  color: #24A3FF;
+  font-size: 16px;
+  grid-row: 2;
+  grid-column: 2;
+}
+.oksana__linked {
+  display: block;
+  color: #24A3FF;
+  font-size: 16px;
+  grid-row: 2;
+  grid-column: 3;
+}
+.oksana__about {
+  display: grid;
+  grid-gap: 30px;
+}
+.oksana__about:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #E6E6F0;
+}
+.oksana__about p {
+  font-size: 16px;
+  line-height: 26px;
+  columns: #000000;
+}
+@media (min-width: 767px) {
+  .oksana__about {
+    grid-column: 1/3;
+  }
+}
+@media (min-width: 1024px) {
+  .oksana__about {
+    grid-column: 2/3;
+  }
+}
+.oksana__text {
+  display: grid;
+  grid-gap: 20px;
+}
+.oksana__education {
+  display: grid;
+  gap: 15px;
+}
+.oksana__exp {
+  display: grid;
+  gap: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */

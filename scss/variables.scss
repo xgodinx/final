@@ -22,6 +22,7 @@ $white-color:#FFFFFF;
 %h1{
   font-weight: 700;
   font-size: 38px;
+  line-height: 100%;
   @extend %gradient-text;
 }
 %h2{
@@ -44,7 +45,7 @@ $white-color:#FFFFFF;
   text-transform: uppercase;
 }
 
-h4{
+%h4{
   font-weight: 700;
   font-size: 16px;
   color: $main-color;
@@ -59,5 +60,7 @@ h4{
     @media (min-width: 1024px) { @content; }
   } @else if $breakpoint == lgx {
     @media (min-width: 1440px) { @content; }
+  } @else if $breakpoint == lgxl {
+    @media (min-width: 1920px) { @content; }
   }
 }

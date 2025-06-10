@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:regular,700);
-.details__number, .consistent__link-gradient, .info__title h1, .contacts__title, .oksana__title, .team__title, .quality__title, .info__title, .profile__title, .services__title, .part__title {
+.details__number, .consistent__link-gradient, .ecom__title, .info__title h1, .contacts__title, .oksana__title, .team__title, .quality__title, .info__title, .profile__title, .services__title, .part__title {
   background: linear-gradient(to right, #F0145A, #EF8080);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -10,7 +10,7 @@
   background: linear-gradient(181deg, rgb(50, 50, 100) 0%, rgb(50, 50, 100) 50%, rgb(100, 62, 114) 100%);
 }
 
-.info__title h1, .contacts__title, .oksana__title, .team__title, .quality__title, .info__title, .profile__title, .services__title, .part__title {
+.ecom__title, .info__title h1, .contacts__title, .oksana__title, .team__title, .quality__title, .info__title, .profile__title, .services__title, .part__title {
   font-weight: 700;
   font-size: 38px;
   line-height: 100%;
@@ -177,6 +177,30 @@ body {
   position: relative;
   z-index: 3;
 }
+.hlegal-services {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 30px;
+}
+.hlegal-services img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1);
+}
+@media (min-width: 767px) {
+  .hlegal-services img {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .hlegal-services img {
+    object-fit: contain;
+    transform: scale(1.3);
+  }
+}
+
 @media (min-width: 1024px) {
   .header__row {
     display: grid;
@@ -309,10 +333,10 @@ body {
   }
 }
 .header__logo {
-  display: flex;
   order: 1;
   padding: 15px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .header__logo img {
   width: 69.33px;
@@ -340,7 +364,12 @@ body {
     margin: 0;
   }
 }
+.header__logo-box1 {
+  display: flex;
+  gap: 4px;
+}
 .header__burger {
+  justify-self: end;
   order: 2;
   width: 32px;
   height: 32px;
@@ -439,6 +468,7 @@ body {
 }
 .header__slash {
   display: block;
+  position: relative !important;
   width: 11.62px !important;
   height: 26px !important;
 }
@@ -454,6 +484,16 @@ body {
 }
 @media (min-width: 767px) {
   .header__page {
+    white-space: nowrap;
+    font-size: 36px;
+  }
+}
+.header__page-black {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+@media (min-width: 767px) {
+  .header__page-black {
     white-space: nowrap;
     font-size: 36px;
   }
@@ -2167,6 +2207,111 @@ body {
   display: flex;
   gap: 28px;
   align-items: flex-end;
+}
+
+.ecom {
+  padding: 0 30px 60px;
+}
+@media (min-width: 767px) {
+  .ecom {
+    margin: 60px 0;
+  }
+}
+.ecom__it {
+  text-align: center;
+  margin-top: 30px;
+}
+@media (min-width: 767px) {
+  .ecom__it {
+    margin-bottom: 60px;
+    grid-column: 1/3;
+  }
+}
+.ecom__it:after {
+  content: "";
+  display: block;
+  background-color: #FFFFFF;
+  opacity: 0.5;
+  width: 100%;
+  height: 4px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+@media (min-width: 767px) {
+  .ecom__it:after {
+    margin-top: 60px;
+  }
+}
+.ecom__image {
+  display: block;
+  margin-bottom: 28px;
+}
+.ecom__image img {
+  padding: 14px;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+}
+.ecom__title {
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+@media (min-width: 767px) {
+  .ecom__title {
+    font-size: 38px;
+  }
+}
+.ecom__text {
+  color: #FFFFFF;
+  font-size: 19px;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+.ecom__text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+.ecom__btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #24A3FF;
+  padding: 0 30px;
+  line-height: 56px;
+  border-radius: 12px;
+}
+@media (min-width: 767px) {
+  .ecom__menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+  }
+}
+.ecom__subtitle {
+  font-weight: 700;
+  font-size: 22px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+.ecom__item {
+  position: relative;
+  font-size: 18px;
+  line-height: 26px;
+  color: #FFFFFF;
+  padding-left: 14px;
+}
+.ecom__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.ecom__item::before {
+  display: inline-block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #F0145A;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

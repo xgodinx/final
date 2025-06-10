@@ -958,3 +958,338 @@
 }
 
 
+//                   PUSBLICATIONS PAGE
+
+.publications {
+  padding: 30px;
+  @include respond (md){
+    margin-top: 60px;
+  }
+		&__subtitles {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $separator-color;
+      
+      max-width: 233px;
+      margin: 0 auto 30px;
+      border-radius: 10px;
+      gap: 2px;
+      padding: 4px;
+      a{
+        display: block;
+        @extend %h4;
+        line-height: 38px;
+        padding: 0 30px;
+        border-radius: 10px;
+        &:first-child{
+          background-color: $white-color;
+        }
+        &:hover:last-child{
+          background-color: $white-color;
+        }
+      }
+		}
+
+		&__row {
+      display: grid;
+      grid-gap: 30px;
+      @include respond (md){
+        grid-template-columns: 1fr 1fr;
+      }
+      @include respond (lg){
+        grid-template-columns:1fr 1fr 1fr;
+      }
+		}
+
+		&__card {
+     
+      
+		}
+
+    &__block{
+      padding: 30px;
+    }
+		&__img {
+      display: block;
+      width: 100%;
+      height: 200px;
+      border-top-left-radius: 8px ;
+      border-top-right-radius: 8px ;
+      overflow: hidden;
+      
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+		}
+
+		&__subtitle {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      color: $regular-color;
+      margin-bottom: 15px;
+      &:hover{
+        color: $accent-color;
+      }
+		}
+
+		&__date {
+      color: $grey-color;
+      font-size: 12px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+		}
+
+		&__text {
+      font-size: 14px;
+      line-height: 22px;
+      color: $black-color;
+      &:before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $separator-color;
+        margin-bottom: 15px;
+      }
+		}
+
+		&__btn {
+      display: inline-block;
+      line-height: 56px;
+      font-size: 16px;
+      font-weight: 700;
+      color: $white-color;
+      background-color: $regular-color;
+      padding: 0 30px;
+      border-radius: 12px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 30px;
+		}
+}
+
+
+//                      PUBLICATIONS GDRP
+
+
+.gdrp {
+  padding: 0 30px;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  @include respond(md){
+    margin-top: 60px;
+  }
+		&__row {
+      max-width: 1360px;
+      margin: 0 auto;
+
+		}
+}
+
+.about {
+  margin-bottom: 30px;
+		&__image {
+      display: block;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 100%;
+      height: 300px;
+      margin-bottom: 30px;
+      @include respond (md){
+        height: 500px;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+		}
+
+		&__title {
+      font-size: 20px;
+      font-weight: 700;
+      color: $main-color;
+      margin-bottom: 15px;
+      @include respond (md){
+        font-size: 30px;
+      }
+		}
+
+		&__date {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $grey-color;
+		}
+}
+.info {
+  display: flex;
+  flex-direction: column;
+		&__text {
+		}
+
+		&__cnil {
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 26px;
+      color: $black-color;
+      p:not(:last-child){
+        margin-bottom: 20px;
+      }
+      &:before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $separator-color;
+        margin-bottom: 30px
+      }
+		}
+
+		&__title {
+      h1{
+        @extend %h1;
+        font-size: 30px;
+        line-height: 100%;
+        @include respond (md){
+          font-size: 38px;
+        }
+      }
+		}
+}
+.results {
+  margin-bottom: 30px;
+		&__title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #46466E;
+      margin-bottom: 15px;
+      @include respond(md){
+        font-size: 22px;
+      }
+		}
+
+		&__text {
+      font-size: 16px;
+      line-height: 26px;
+      color: $black-color;
+		}
+
+		&__add {
+      display: block;
+      width: 100%;
+      height: 195px;
+      margin-bottom: 15px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @include respond (md){
+        height: 398px;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+		}
+    &__add-text{
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey-color;
+        @include respond (md){
+        max-width: 640px;
+        margin: 0 auto 30px;
+      }
+    }
+}
+.list {
+  margin-bottom: 30px;
+  li{
+    font-size: 18px;
+    line-height: 26px;
+    color: $black-color;
+    padding-left: 18px;
+  }
+		&__item-1 {
+      margin-bottom: 15px;
+      display: flex;
+      gap: 10px;
+      &:before{
+        content: "1.";
+        display: inline-block;
+        color: $accent-color;
+        font-weight: 700;
+        font-size: 18px;
+      }
+		}
+
+		&__item-2 {
+      display: flex;
+      gap: 10px;
+      &:before{
+        content: "2.";
+        display: block;
+        color: $accent-color;
+        font-weight: 700;
+        font-size: 18px;
+      }
+		}
+}
+.decision {
+  margin-bottom: 30px;
+		&__title {
+      font-weight: 700;
+      font-size: 16px;
+      color: $main-color;
+      margin-bottom: 15px;
+      @include respond(md){
+        font-size: 22px;
+      }
+		}
+
+		&__text {
+      font-size: 16px;
+      line-height: 26px;
+      color: $black-color;
+      
+      p:not(:last-child){
+        margin-bottom: 20px;
+      }
+      &:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $separator-color;
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+		}
+}
+.social {
+
+		&__images {
+      display: flex;
+      gap: 28px;
+      align-items: flex-end;
+		}
+
+		&__fb {
+		}
+
+		&__tg {
+		}
+
+		&__linked {
+		}
+}
+
+

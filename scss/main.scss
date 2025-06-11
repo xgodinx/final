@@ -26,10 +26,12 @@
         grid-template-rows: 1fr;
       }
       @include respond (lgx) {
-        min-width: 1080px;
-        max-width: 1360px;
+        max-width: 1080px;
         margin: 0 auto;
         grid-template-columns: 1fr auto 2fr;
+      }
+      @include respond (lgxl) {
+        max-width: 1360px;
       }
 		}
 
@@ -47,10 +49,11 @@
       overflow-y: hidden;
       scrollbar-width: none;
       @include respond (lg){
-        white-space: wrap;
+        
         display: grid;
         grid-auto-flow: row;
         justify-items: end;
+        text-align: right;
         height: 100%;
       }
 		}
@@ -114,92 +117,6 @@
       line-height: 30px;
 		}
 }
-
-
-//                         service cards
-
-.services {
-  padding: 0 30px;
-		&__topic {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 30px;
-      @include respond (md){
-        margin-bottom: 60px;
-      }
-		}
-
-		&__subtitle {
-      display: flex;
-      align-items: center;
-      color: $regular-color;
-      h4{
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: $regular-color;
-        &:hover{
-        color: $accent-color;
-        transition: color 0.3s ease;
-      }
-      }
-      &:hover{
-        color: $accent-color;
-        transition: color 0.3s ease;
-      }
-		}
-
-		&__title {
-      @extend %h1;
-      font-size: 30px;
-      @include respond (md){
-        font-size: 38px;
-      }
-		}
-
-		&__row {
-      display: grid;
-      grid-gap: 30px;
-      @include respond (md){
-        grid-template-columns: 1fr 1fr;
-      }
-      @include respond (lg){
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-		}
-
-}
-
-.card {
-  
-		&__image {
-      display: block;
-      margin-bottom: 30px;
-      img{
-        background-color: $white-color;
-        padding: 14px;
-        border-radius: 24px;
-        align-content: center;
-      }
-		}
-
-		&__title {
-      h2{
-        @extend %h3;
-        color: $regular-color;
-        margin-bottom: 15px;
-      }
-		}
-
-		&__text {
-      font-size: 16px;
-      color: $white-color;
-      line-height: 26px;
-		}
-}
-
 
 
 
@@ -531,12 +448,16 @@
       
       @extend %h1;
       font-size: 30px;
-      
-      max-width: 1360px;
       margin: 0 auto 30px;
       @include respond (md){
         font-size: 38px;
         margin-bottom: 60px;
+      }
+      @include respond (lgx){
+        max-width: 1080px;
+      }
+      @include respond (lgxl){
+        max-width: 1360px;
       }
 		}
 
@@ -605,6 +526,9 @@
 }
 .svg-arrow-rotate{
   transform: rotate(270deg);
+  @include respond (md){
+    transform: rotate(0);
+  }
 }
 
 
@@ -631,6 +555,13 @@
       @include respond(lgx){
         grid-template-columns: 400px 1fr;
         grid-template-rows: 83px;
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+      @include respond(lgxl){
+        
+        max-width: 1300px;
+        margin: 0 auto;
       }
 		}
 
@@ -759,14 +690,15 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
+      margin: 0 auto;
       @include respond (lg){
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 60px;
+        max-width: 1080px;
       }
       @include respond (lgxl){
-        max-width: 1300px;
-        margin: 0 auto;
+        max-width: 1360px;
       }
 		}
 
@@ -934,8 +866,6 @@
       }
     }
 
-		
-
 		&__btn {
       border-radius: 12px;
       display: block;
@@ -1003,8 +933,6 @@
 		}
 
 		&__card {
-     
-      
 		}
 
     &__block{
@@ -1087,9 +1015,14 @@
     margin-top: 60px;
   }
 		&__row {
-      max-width: 1360px;
       margin: 0 auto;
-
+      @include respond (lgx){
+        max-width: 1080px;
+      }
+      
+      @include respond (lgxl){
+        max-width: 1360px;
+      }
 		}
 }
 
@@ -1130,7 +1063,7 @@
       color: $grey-color;
 		}
 }
-.info {
+.information {
   display: flex;
   flex-direction: column;
 		&__text {
@@ -1159,6 +1092,7 @@
         @extend %h1;
         font-size: 30px;
         line-height: 100%;
+        margin-bottom: 30px;
         @include respond (md){
           font-size: 38px;
         }
@@ -1293,7 +1227,14 @@
     margin: 60px 0;
   }
 		&__row {
+      margin: 0 auto;
+      @include respond (lgx){
+        max-width: 1080px;
+      }
       
+      @include respond (lgxl){
+        max-width: 1360px;
+      }
 		}
 
 		&__it {
@@ -1316,7 +1257,6 @@
           margin-top: 60px;
         }
       }
-      
 		}
 
 		&__image {
@@ -1335,7 +1275,6 @@
       margin-bottom: 28px;
       @include respond (md){
         font-size: 38px;
-        
       }
 		}
 
@@ -1369,19 +1308,12 @@
         grid-gap: 60px;
       }
     }
-		&__projects {
-      
-		}
 
 		&__subtitle {
         font-weight: 700;
         font-size: 22px;
         color: $white-color;
         margin-bottom: 30px;
-		}
-
-		&__list {
-      
 		}
 
 		&__item {
@@ -1405,9 +1337,4 @@
         left: 0;
       }
 		}
-
-		&__procedures {
-      
-		}
 }
-

@@ -265,6 +265,7 @@
       img{
         width: 69.33px;
         height: 32px;
+        transform: scale(1);
       }
       @include respond(md){
         padding: 0;
@@ -833,6 +834,109 @@
 		}
 }
 
+//                         SERVICES - PART
+.operations__title {
+      margin: 30px 0;
+      @extend %h1;
+      font-size: 30px;
+      @include respond (md){
+        margin: 60px 0;
+        font-size: 38px;
+      }
+		}
+.services {
+  padding: 0 30px;
+  
+		&__topic {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 30px;
+      @include respond (md){
+        margin-bottom: 60px;
+      }
+		}
+
+		&__subtitle {
+      display: flex;
+      align-items: center;
+      color: $regular-color;
+      h4{
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $regular-color;
+        &:hover{
+        color: $accent-color;
+        transition: color 0.3s ease;
+      }
+      }
+      &:hover{
+        color: $accent-color;
+        transition: color 0.3s ease;
+      }
+		}
+
+		&__title {
+      @extend %h1;
+      font-size: 30px;
+      @include respond (md){
+        font-size: 38px;
+      }
+    
+		}
+
+		&__row {
+      display: grid;
+      grid-gap: 30px;
+      @include respond (md){
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 60px;
+      }
+      @include respond (lg){
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      
+		}
+
+}
+
+.card {
+  
+		&__image {
+      display: block;
+      margin-bottom: 30px;
+      img{
+        background-color: $white-color;
+        padding: 14px;
+        border-radius: 24px;
+        align-content: center;
+      }
+		}
+
+		&__title {
+      h2{
+        @extend %h3;
+        color: $regular-color;
+        margin-bottom: 15px;
+        &:hover{
+        color: $accent-color;
+        transition: color 0.3s ease;
+      }
+      }
+      
+		}
+
+		&__text {
+      font-size: 16px;
+      color: $white-color;
+      line-height: 26px;
+		}
+}
+
+
+
 
 //                 footer
 
@@ -997,3 +1101,4 @@
   background-color: $separator-color;
   
 }
+
